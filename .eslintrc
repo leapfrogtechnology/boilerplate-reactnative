@@ -1,0 +1,86 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "es6": true,
+    "jest": true,
+    "browser": true
+  },
+  "plugins": [
+    "react",
+    "react-native"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "no-var": [
+      "error"
+    ],
+    "eqeqeq": [
+      "error"
+    ],
+    "comma-dangle": [
+      "error"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "space-infix-ops": [
+      "error"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "eol-last": [
+      "error",
+      "always"
+    ],
+    "newline-before-return": [
+      "error"
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "spaced-comment": [
+      "error",
+      "always"
+    ],
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "react-native/no-unused-styles": [
+      "error"
+    ],
+    "react-native/no-inline-styles": [
+      "error"
+    ],
+    "react-native/no-color-literals": [
+      "error"
+    ],
+    "camelcase": [
+      "error",
+      {
+        "properties": "never"
+      }
+    ],
+    "react-native/split-platform-components": [
+      "error"
+    ],
+    "valid-jsdoc": [
+      "warn",
+      {
+        "requireReturn": false,
+        "requireParamDescription": false,
+        "requireReturnDescription": false
+      }
+    ]
+  }
+}
