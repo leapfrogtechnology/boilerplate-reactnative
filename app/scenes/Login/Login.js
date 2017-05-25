@@ -1,7 +1,7 @@
 import {
   Text,
   View,
-  ToastAndroid
+  Alert
 } from 'react-native';
 import LoginView from './LoginView';
 import message from '../../lang/en';
@@ -54,14 +54,14 @@ class Login extends Component {
   */
   _loginUser = () => {
     if (!validationUtils.isEmailValid(this.state.login.username)) {
-      ToastAndroid.show(message.WRONG_EMAIL_FORMAT, ToastAndroid.SHORT);
+      Alert.alert(message.WRONG_EMAIL_FORMAT)
       return;
     }
 
     httpUtils.post(uri.LOGIN, this.state.login).then((response) => {
-      ToastAndroid.show(message.WRONG_EMAIL_FORMAT, ToastAndroid.SHORT);
-    }, () => {
-      ToastAndroid.show(message.USER_NOT_FOUND, ToastAndroid.SHORT);
+      Alert.alert(message.success)
+    }, (err) => {
+       Alert.alert(err)
     });
     }
 }

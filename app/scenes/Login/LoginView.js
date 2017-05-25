@@ -5,7 +5,8 @@ import {
   TextInput,
   ScrollView
 } from 'react-native';
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import TransparentButton from '../../components/TransparentButton';
 
 import styles from './styles';
@@ -28,6 +29,7 @@ const LoginView = (props) => (
           <View>
               <TextInput
                 value={props.data.password}
+                secureTextEntry={true}
                 placeholder="Password"
                 onChangeText={(value) => props.handleOnChange('login.password', value)}
               />

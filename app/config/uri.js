@@ -1,7 +1,7 @@
-const BASE_URL = 'http://localhost:8000/knowledgebase/contract-review';
+const BASE_URL = 'http://jsonplaceholder.typicode.com';
 
 const uri = {
-    LOGIN: BASE_URL + '/api/contract-payor-groups/?organization_id=102'
+    LOGIN: BASE_URL + '/posts'
 };
 
 export default uri;

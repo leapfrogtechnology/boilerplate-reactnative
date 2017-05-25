@@ -1,5 +1,5 @@
 const message = {
-    SUCCESS: 'Successfull',
+    SUCCESS: 'successfull',
     USER_NOT_FOUND: 'User not found',
     WRONG_EMAIL_FORMAT: 'Invalid email'
 };

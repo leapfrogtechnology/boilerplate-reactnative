@@ -30,7 +30,7 @@ async function get(url) {
 async function post(url, body) {
   return axios.post(url, body, {
     headers: {
-      'Authorization': await _getAccessToken(),
+      'Authorization': '',
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     }
