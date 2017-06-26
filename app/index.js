@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
+import Routes from './routes';
 
-import Login from './scenes/Login';
-
-const App = () => (
-  <Login/>
-);
+class App extends Component {
+  render() {
+    return (
+      <Routes />
+    );
+  }
+}
 
 export default App;

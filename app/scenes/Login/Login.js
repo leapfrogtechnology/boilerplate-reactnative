@@ -7,7 +7,9 @@ import LoginView from './LoginView';
 import message from '../../lang/en';
 import uri from '../../config/uri';
 import React, {Component} from 'react';
-import {httpUtils, validationUtils} from '../../utils';
+import {Actions, ActionConst} from 'react-native-router-flux';
+import {httpUtils, validationUtils, authUtils} from '../../utils';
+import ActivityIndicator from '../../components/ActivityIndicator';
 
 import styles from './styles';
 
@@ -19,11 +21,18 @@ class Login extends Component {
           login: {
             username: '',
             password:''
+          },
+          eventFeedback: {
+            isLoading: false
           }
          };
     }
 
   render() {
+    if (this.state.eventFeedback.isLoading) {
+      return <ActivityIndicator isLoading={this.state.eventFeedback.isLoading}/>;
+    }
+
     return (
       <View style={styles.container}>
         <LoginView
@@ -57,11 +66,17 @@ class Login extends Component {
       Alert.alert(message.WRONG_EMAIL_FORMAT)
       return;
     }
+    this.state.eventFeedback.isLoading = true;
+    this.setState({eventFeedback: this.state.eventFeedback});
 
-    httpUtils.post(uri.LOGIN, this.state.login).then((response) => {
-      Alert.alert(message.success)
+    httpUtils.post(uri.LOGIN, {}).then((response) => {
+      this.state.eventFeedback.isLoading = false;
+      this.setState({eventFeedback: this.state.eventFeedback});
+      authUtils.login(response);     
     }, (err) => {
-       Alert.alert(err)
+      Alert.alert(err);
+      this.state.eventFeedback.isLoading = false;
+      this.setState({eventFeedback: this.state.eventFeedback});      
     });
     }
 }
