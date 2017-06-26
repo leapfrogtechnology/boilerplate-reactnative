@@ -17,6 +17,15 @@ const isStringWithoutSpaceValid = (string) => {
 };
 
 /**
+ * Validate email.
+ * @param {String} string
+ * @return {*|boolean}
+ */
+const isEmailValid = (string) => {
+  return (/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(string.toString().trim());
+};
+
+/**
  * Validate string with alphabet spaces or numbers.
  * @param {String} string
  * @return {*|boolean}
@@ -26,4 +35,4 @@ const isStringWithSpaceAndNumberValid = (string) => {
 };
 
 
-export {isStringWithSpaceValid, isStringWithoutSpaceValid, isStringWithSpaceAndNumberValid};
+export {isEmailValid, isStringWithSpaceValid, isStringWithoutSpaceValid, isStringWithSpaceAndNumberValid};
