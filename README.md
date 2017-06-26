@@ -1,4 +1,4 @@
-# React Native Boilerplate (Android App)
+# React Native Boilerplate
 
 ## Requirements
 * [Node.js](https://nodejs.org/en/) >= 6.5.0
@@ -8,10 +8,10 @@
 
 ## Installation
 * First install all react native dependencies. [Follow these steps here](https://facebook.github.io/react-native/docs/getting-started.html#installing-dependencies).
-* Clone the repository from [https://github.com/leapfrogtechnology/kharaayo-mobile](https://github.com/leapfrogtechnology/kharaayo-mobile):
+* Clone the repository from [https://github.com/leapfrogtechnology/boilerplate-reactnative](https://github.com/leapfrogtechnology/boilerplate-reactnative):
 
           $ git clone git@github.com:leapfrogtechnology/boilerplate-reactnative.git
-* Navigate to the directory `cd kharaayo-mobile` and install all dependencies listed in [package.json](package.json) using npm:
+* Navigate to the directory `cd boilerplate-reactnative` and install all dependencies listed in [package.json](package.json) using npm:
 
           $ npm install
 
